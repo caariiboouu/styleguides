@@ -1,0 +1,41 @@
+{
+  "name": "react-app-ts",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/react-redux": "^5.0.15",
+    "@types/react-router-dom": "^4.2.6",
+    "material-ui": "^1.0.0-beta.40",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "mobx": "^4.1.1",
+    "mobx-react": "^5.0.0",
+    "node-sass-chokidar": "^1.2.2",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts-ts": "2.14.0",
+    "redux": "^3.7.2",
+    "typings": "^2.1.1"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "mock-api": "interfake --port 3004 --file ./mock-api/apis.json"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.9",
+    "@types/jest": "^22.2.2",
+    "@types/node": "^7.0.59",
+    "@types/react": "^16.3.2",
+    "@types/react-dom": "^16.0.4",
+    "enzyme": "^3.3.0",
+    "interfake": "^1.19.0",
+    "react-addons-test-utils": "^15.6.2",
+    "typescript": "^2.8.1"
+  }
+}

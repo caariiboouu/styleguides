@@ -1,0 +1,351 @@
+@import './mixins/_mixins.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    overflow-x: hidden;
+    color: #808080;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px;
+    background-color: #fcfcfc;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body * {
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #333333;
+}
+
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
+h3 { font-size: 2em; }
+
+
+/* Lists */
+nav {
+    li {
+        div {
+            h3 {
+                font-size: 1em; 
+            }
+        }
+    }
+
+    div[role='button'] {
+        h3 {
+            font-size: 1em; 
+        }
+    }
+}
+/* // Lists */
+
+
+a { color: $cornflower; }
+
+div.paper-content-wrapper {
+    padding: 20px;
+    margin-bottom: 12px!important;
+}
+
+.ExpansionPanel-content-wrapper {
+    margin-top: 12px!important;
+    margin-bottom: 12px!important;
+
+    h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+    }
+}
+
+div.snackbar-wrapper {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center;
+
+    .snackbar-message {
+        display: inline-block;
+    }
+
+    .snackbar-button {
+        position: absolute;
+        right: 48px;
+        margin-top: -12px;
+    }
+
+    .success, .warn, .danger {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        text-align: center;
+        
+        div[role='alertdialog'] {
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            text-align: center;
+
+            div {
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    .success {
+
+        div[role='alertdialog'] {
+            background-color: $successBackground;
+            color: $successText;
+            border-color: $successBorder;
+            border-style: solid;
+            border-width: 0 0 1px 0;
+        }
+    }
+    
+    .warn {
+
+        div[role='alertdialog'] {
+            background-color: $warnBackground;
+            color: $warnText;
+            border-color: $warnBorder;
+            border-style: solid;
+            border-width: 0 0 1px 0;
+        }
+    }
+    
+    .danger {
+
+        div[role='alertdialog'] {
+            background-color: $dangerBackground;
+            color: $dangerText;
+            border-color: $dangerBorder;
+            border-style: solid;
+            border-width: 0 0 1px 0;
+        }
+
+    }
+}
+
+.container {
+    max-width: 100%;
+    margin: 100px auto 0 auto;
+    padding: 0 48px;
+}
+
+div.button-row {
+    text-align: right;
+    width: 100%;
+    padding: 8px 0;
+
+    button {
+        margin-right: 12px;
+    }
+}
+
+.button {
+    &.success {
+        color: #fff;
+        background-color: $successBorder!important;
+    }
+
+    &.warn {
+        color: #fff;
+        background-color: $warnBorder!important;
+    }
+
+    &.danger {
+        color: #fff;
+        background-color: $dangerBorder!important;
+    }
+}
+
+.sg-h1, .sg-h2, .sg-h3 {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 24px;
+    margin: 0;
+    padding: 0;
+    text-indent: 0.1em;
+    padding-bottom: 0.2em;
+}
+
+
+.sg-section {
+	width: 100%;
+    clear: both;
+    background: #fff;
+    margin-top: 50px;
+    padding: 12px;
+    padding-bottom: 50px;
+    @include box-shadow(0, 0, 4px, rgba(0,0,0,0.2));
+    
+    .sg-display {
+        box-sizing: border-box;
+        
+        .sg-h2 {
+            text-transform: capitalize;
+            border-bottom-width: 2px;
+        }
+    }
+}
+
+
+.sg-swatch {
+    display: inline-block;
+
+    label {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sg-color {
+        background: #fff;
+        border: 1px solid #b3b3b3;
+        display: block;
+        height: 100px;
+        margin: 0 .5em .5em 0;
+        padding: 0;
+        position: relative;
+        width: 150px;
+
+        .sg-color-cta {
+
+            .bg-color {
+                position: absolute;
+                z-index: 0;
+                top: 5px;
+                right: 5px;
+                bottom: 5px;
+                left: 5px;
+                border-width: 1px;
+                border-style: solid;
+
+                span {
+                    display: block;
+                    position: absolute;
+                    z-index: 10;
+                    width: 100%;
+                    top: 50%;
+                    margin-top: -10px;
+                    text-align: center;
+                    font-weight: normal;
+                }
+            }
+
+            &.solitude {
+                .bg-color {
+                    background: $solitude;
+                    border: 0;
+                }
+            }
+        
+            &.peru {
+                .bg-color {
+                    background: $peru;
+                    color: #fff;
+                    border: 0;
+                }
+            }
+        
+            &.perano {
+                .bg-color {
+                    background: $perano;
+                    color: #fff;
+                    border: 0;
+                }
+            }
+        
+            &.cornflower {
+                .bg-color {
+                    background: $cornflower;
+                    color: #fff;
+                    border: 0;
+                }
+            }
+        
+            &.azure {
+                .bg-color {
+                    background: $azure;
+                    color: #fff;
+                    border: 0;
+                }
+            }
+        
+            &.midnight {
+                .bg-color {
+                    background: $midnight;
+                    color: #fff;
+                    border: 0;
+                }
+            }
+
+            &.success {
+                .bg-color {
+                    background: $successBackground;
+                    color: $successText;
+                    border-color: $successBorder;
+                }
+            }
+
+            &.warn {
+                .bg-color {
+                    background: $warnBackground;
+                    color: $warnText;
+                    border-color: $warnBorder;
+                }
+            }
+
+            &.danger {
+                .bg-color {
+                    background: $dangerBackground;
+                    color: $dangerText;
+                    border-color: $dangerBorder;
+                }
+            }
+
+            &.appPrimaryColor {
+                .bg-color {
+                    background: $azure;
+                    color: #fff;
+                    border: 0;
+                }
+            }
+
+            &.anchors {
+                .bg-color {
+                    background: $cornflower;
+                    color: #fff;
+                    border: 0;
+                }
+            }
+
+            &.bodyText {
+                .bg-color {
+                    background: #808080;
+                    color: #fff;
+                    border: 0;
+                }
+            }
+
+            &.headerText {
+                .bg-color {
+                    background: #333333;
+                    color: #fff;
+                    border: 0;
+                }
+            }
+        }
+    }
+
+}

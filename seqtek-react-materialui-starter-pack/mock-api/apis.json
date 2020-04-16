@@ -1,0 +1,61 @@
+[
+	{
+		"request": {
+			"url": "/empycall",
+			"method": "get"
+		},
+		"response": {
+			"code": 200,
+			"delay": 0,
+			"body": {}
+		}
+	},
+	{
+		"request": {
+			"url": "/account",
+			"method": "get"
+		},
+		"response": {
+			"code": 200,
+			"delay": 0,
+			"body": {
+				"id": 1,
+				"firstName": "Justin",
+				"lastName": "Jiles",
+				"email": "jj@seqtechllc.com",
+				"phoneNumber": "9185551212"
+			}
+		}
+	},
+	{
+		"request": {
+			"url": {
+				"pattern": "/example/regexp/url/.*",
+				"regexp": true
+			},
+			"method": "get"
+		},
+		"response": {
+			"code": 200,
+			"delay": 0,
+			"body": {
+				"Results": [
+					{
+						"name": "Parent Tree",
+						"id": "123456"
+					},
+					{
+						"name": "API Call",
+						"id": "789111"
+					},
+					{
+						"name": "Was Made",
+						"id": "121314"
+					}
+				],
+				"Success": true,
+				"ErrorMessage": null
+			}
+		}
+	}
+]

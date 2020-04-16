@@ -1,0 +1,36 @@
+
+/* Colors */
+$solitude: #f5f9fc;
+$peru: #37546a;
+$perano: #f5f9fc;
+$cornflower: #f5f9fc;
+$azure: #37546a;
+$midnight: #37546a;
+
+$successBackground: #109fbf;
+$successText: #fff;
+$successBorder: #109fbf;
+
+$warnBackground: #ecd216;
+$warnText: #fff;
+$warnBorder: #ecd216;
+
+$dangerBackground: #9a3c3c;
+$dangerText: #fff;
+$dangerBorder: #9a3c3c;
+
+$grey_darkest  : rgb(33,33,33);
+$grey_lightest : lighten($grey_darkest, 100%);
+$grey_lighter  : lighten($grey_darkest, 82%);
+$grey_light    : lighten($grey_darkest, 72%);
+$grey_medium   : lighten($grey_darkest, 50%);
+$grey_dark     : lighten($grey_darkest, 28%);
+$grey_darker   : lighten($grey_darkest, 10%);
+
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+    -webkit-box-shadow:$top $left $blur $color #{$inset};
+    -moz-box-shadow:$top $left $blur $color #{$inset};
+    box-shadow:$top $left $blur $color #{$inset};
+}
